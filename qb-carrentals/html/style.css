@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: none;
+    background: transparent;
+}
+
+#rental-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 1200px;
+    background: rgba(15, 15, 15, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    display: none;
+}
+
+#rental-container.show {
+    display: block;
+}
+
+.menu-container {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4CAF50;
+    text-align: center;
+}
+
+/* Categories Grid */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.category {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.category:hover {
+    background: rgba(40, 40, 40, 0.9);
+    transform: translateY(-2px);
+}
+
+.category.selected {
+    background: #4CAF50;
+}
+
+/* Vehicles Grid */
+.vehicles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.vehicle {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.vehicle:hover {
+    background: rgba(40, 40, 40, 0.9);
+    transform: translateY(-2px);
+}
+
+.vehicle.selected {
+    border: 2px solid #4CAF50;
+}
+
+/* Insurance Options */
+.insurance-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.insurance-option {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.insurance-option:hover {
+    background: rgba(40, 40, 40, 0.9);
+}
+
+.insurance-option.selected {
+    border: 2px solid #4CAF50;
+}
+
+/* Duration Options */
+.duration-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.duration-option {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.duration-option:hover {
+    background: rgba(40, 40, 40, 0.9);
+}
+
+.duration-option.selected {
+    background: #4CAF50;
+}
+
+/* Price Breakdown */
+.price-breakdown {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.breakdown-items {
+    display: grid;
+    gap: 10px;
+}
+
+.breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.breakdown-item.total {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+/* Loyalty Status */
+.loyalty-status {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.back-btn {
+    background: #666;
+    color: white;
+}
+
+.rent-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Close Button */
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#close-btn:hover {
+    color: #4CAF50;
+}

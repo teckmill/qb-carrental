@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QB Car Rentals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="rental-container">
+        <!-- Main Menu -->
+        <div id="categories-container" class="menu-container">
+            <h2>Vehicle Categories</h2>
+            <div class="categories-grid"></div>
+        </div>
+
+        <!-- Vehicles Menu -->
+        <div id="vehicles-container" class="menu-container">
+            <h2>Select Vehicle</h2>
+            <div class="vehicles-grid"></div>
+            <button class="back-btn" onclick="resetMenu()">Back</button>
+        </div>
+
+        <!-- Rental Details Menu -->
+        <div id="rental-details" class="menu-container">
+            <h2>Rental Details</h2>
+            <div class="rental-info">
+                <div class="selected-vehicle">
+                    <h3>Selected Vehicle</h3>
+                    <p id="vehicle-name"></p>
+                    <p id="base-price"></p>
+                </div>
+
+                <!-- Duration Selection -->
+                <div class="duration-selection">
+                    <h3>Rental Duration</h3>
+                    <div class="duration-options"></div>
+                </div>
+
+                <!-- Insurance Selection -->
+                <div class="insurance-selection">
+                    <h3>Insurance Options</h3>
+                    <div class="insurance-options">
+                        <div class="insurance-option" data-insurance="none">
+                            <h4>No Insurance</h4>
+                            <p>No coverage for damage</p>
+                            <p class="price">No additional cost</p>
+                        </div>
+                        <div class="insurance-option" data-insurance="basic">
+                            <h4>Basic Insurance</h4>
+                            <p>50% damage coverage</p>
+                            <p class="price">+15% of rental cost</p>
+                        </div>
+                        <div class="insurance-option" data-insurance="premium">
+                            <h4>Premium Insurance</h4>
+                            <p>100% damage coverage</p>
+                            <p class="price">+25% of rental cost</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loyalty Status -->
+                <div class="loyalty-status">
+                    <h3>Your Loyalty Status</h3>
+                    <p id="loyalty-points">Loading points...</p>
+                    <p id="loyalty-discount">Current Discount: calculating...</p>
+                </div>
+
+                <!-- Price Breakdown -->
+                <div class="price-breakdown">
+                    <h3>Price Breakdown</h3>
+                    <div class="breakdown-items">
+                        <div class="breakdown-item">
+                            <span>Base Price:</span>
+                            <span id="breakdown-base">$0</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span>Insurance:</span>
+                            <span id="breakdown-insurance">$0</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span>Loyalty Discount:</span>
+                            <span id="breakdown-discount">-$0</span>
+                        </div>
+                        <div class="breakdown-item total">
+                            <span>Total:</span>
+                            <span id="total-price">$0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="back-btn" onclick="showVehicles(selectedCategory)">Back</button>
+                    <button class="rent-btn" onclick="confirmRental()">Rent Vehicle</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Close Button -->
+        <div id="close-btn">&times;</div>
+    </div>
+</body>
+</html>
